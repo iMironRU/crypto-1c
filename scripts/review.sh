@@ -3,12 +3,12 @@
 #
 # Использование:
 #   ./scripts/review.sh <файл>                     — DeepSeek (по умолчанию)
-#   ./scripts/review.sh <файл> gpt-4.1             — OpenAI GPT-4.1
+#   ./scripts/review.sh <файл> gpt-5.5-pro         — OpenAI GPT-5.5 Pro
 #   ./scripts/review.sh <файл> deepseek-v4-pro
 #
 # Примеры:
 #   ./scripts/review.sh course/lesson-01/README.md
-#   ./scripts/review.sh course/lesson-02/README.md gpt-4.1
+#   ./scripts/review.sh course/lesson-02/README.md gpt-5.5-pro
 #
 # Требования:
 #   - Python 3 в PATH
