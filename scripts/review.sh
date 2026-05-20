@@ -104,7 +104,7 @@ req = urllib.request.Request(
 
 print(f"Отправляю запрос в {provider_label} ({model})...", flush=True)
 try:
-    with urllib.request.urlopen(req, timeout=120) as resp:
+    with urllib.request.urlopen(req, timeout=180) as resp:
         result = json.loads(resp.read().decode("utf-8"))
 except urllib.error.HTTPError as e:
     print(f"Ошибка HTTP {e.code}: {e.read().decode('utf-8', 'replace')}", file=sys.stderr)

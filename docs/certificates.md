@@ -52,7 +52,10 @@ makecert.exe -r -pe -n "CN=CryptoLearn" -ss my -sr currentuser -sky exchange -sp
 $cert = New-SelfSignedCertificate `
     -Subject "CN=CryptoLearn" `
     -CertStoreLocation "Cert:\CurrentUser\My" `
+    -KeyAlgorithm RSA `
+    -KeyLength 2048 `
     -KeyUsage KeyEncipherment, DigitalSignature `
+    -Provider "Microsoft Strong Cryptographic Provider" `
     -NotAfter (Get-Date).AddYears(2)
 
 Write-Host "Отпечаток: $($cert.Thumbprint)"
