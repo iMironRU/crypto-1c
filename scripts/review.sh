@@ -81,15 +81,18 @@ system_prompt = prompt_path.read_text(encoding="utf-8")
 chapter_text  = chapter_file.read_text(encoding="utf-8")
 
 # --- Запрос к API ---
+# Новые модели OpenAI (gpt-5+) используют max_completion_tokens и не принимают temperature
+tokens_key = "max_completion_tokens" if is_openai else "max_tokens"
 payload = {
     "model": model,
     "messages": [
         {"role": "system", "content": system_prompt},
         {"role": "user",   "content": f"Вот урок для рецензии:\n\n{chapter_text}"}
     ],
-    "temperature": 0.3,
-    "max_tokens": 4096
+    tokens_key: 8192
 }
+if not is_openai:
+    payload["temperature"] = 0.3
 
 req = urllib.request.Request(
     api_url,
