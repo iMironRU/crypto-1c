@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
-# review.sh — отправить урок на рецензию ИИ-редактору (DeepSeek или OpenAI)
+# review.sh — отправить урок на рецензию ИИ-редактору
 #
 # Использование:
 #   ./scripts/review.sh <файл>                     — DeepSeek (по умолчанию)
-#   ./scripts/review.sh <файл> gpt-5.5-pro         — OpenAI GPT-5.5 Pro
+#   ./scripts/review.sh <файл> gpt-5.5             — OpenAI GPT-5.5
+#   ./scripts/review.sh <файл> gemini-2.5-pro      — Google Gemini 2.5 Pro
 #   ./scripts/review.sh <файл> deepseek-v4-pro
 #
 # Примеры:
 #   ./scripts/review.sh course/lesson-01/README.md
-#   ./scripts/review.sh course/lesson-02/README.md gpt-5.5-pro
+#   ./scripts/review.sh course/lesson-02/README.md gpt-5.5
+#   ./scripts/review.sh course/lesson-04/README.md gemini-2.5-pro
 #
 # Требования:
 #   - Python 3 в PATH
-#   - .env с DEEPSEEK_API_KEY и/или OPENAI_API_KEY
+#   - .env с DEEPSEEK_API_KEY и/или OPENAI_API_KEY и/или GEMINI_API_KEY
 
 set -euo pipefail
 
@@ -47,7 +49,9 @@ if not chapter_file.is_absolute():
     chapter_file = Path.cwd() / chapter_file
 
 # --- Определить провайдера по имени модели ---
-is_openai = model.startswith(("gpt-", "o1", "o3", "o4", "chatgpt"))
+is_openai  = model.startswith(("gpt-", "o1", "o3", "o4", "chatgpt"))
+is_gemini  = model.startswith("gemini-")
+# DeepSeek = всё остальное
 
 # --- Загрузить ключи из .env ---
 env_path = root_dir / ".env"
@@ -67,6 +71,13 @@ if is_openai:
         sys.exit(1)
     api_url = "https://api.openai.com/v1/chat/completions"
     provider_label = "OpenAI"
+elif is_gemini:
+    api_key = keys.get("GEMINI_API_KEY")
+    if not api_key:
+        print("Ошибка: GEMINI_API_KEY не найден в .env", file=sys.stderr)
+        sys.exit(1)
+    api_url = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+    provider_label = "Google Gemini"
 else:
     api_key = keys.get("DEEPSEEK_API_KEY")
     if not api_key:
@@ -81,7 +92,8 @@ system_prompt = prompt_path.read_text(encoding="utf-8")
 chapter_text  = chapter_file.read_text(encoding="utf-8")
 
 # --- Запрос к API ---
-# Новые модели OpenAI (gpt-5+) используют max_completion_tokens и не принимают temperature
+# OpenAI gpt-5+ использует max_completion_tokens и не принимает temperature
+# Gemini и DeepSeek используют max_tokens и принимают temperature
 tokens_key = "max_completion_tokens" if is_openai else "max_tokens"
 payload = {
     "model": model,

@@ -1,1 +1,245 @@
-{}
+{
+  "course/lesson-01/README.md": {
+    "history": [
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-01/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-4.1-2025-04-14",
+        "file": "reviews/lesson-01/README.gpt-41-2025-04-14.2026-05-20.md"
+      }
+    ],
+    "last_reviewed": "2026-05-20",
+    "last_model": "gpt-4.1-2025-04-14",
+    "decision": "approved",
+    "decision_date": "2026-05-20",
+    "decision_note": "Прошёл рецензию DeepSeek, исправлен абсолют"
+  },
+  "course/lesson-02/README.md": {
+    "history": [
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-02/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-4.1-2025-04-14",
+        "file": "reviews/lesson-02/README.gpt-41-2025-04-14.2026-05-20.md"
+      }
+    ],
+    "last_reviewed": "2026-05-20",
+    "last_model": "gpt-4.1-2025-04-14",
+    "decision": "approved",
+    "decision_date": "2026-05-20",
+    "decision_note": "Прошёл DeepSeek и GPT-4.1, исправлены два замечания"
+  },
+  "course/lesson-03/README.md": {
+    "history": [
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-03/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-03/README.gpt-55-2026-04-23.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-03/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-03/README.gpt-55-2026-04-23.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-03/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-03/README.gpt-55-2026-04-23.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-03/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-03/README.gpt-55-2026-04-23.2026-05-20.md"
+      }
+    ],
+    "last_reviewed": "2026-05-20",
+    "last_model": "gpt-5.5-2026-04-23",
+    "decision": "approved",
+    "decision_date": "2026-05-20",
+    "decision_note": "DeepSeek чисто, GPT-5.5 три итерации — все критические правки внесены"
+  },
+  "course/lesson-04/README.md": {
+    "history": [
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-04/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-04/README.gpt-55-2026-04-23.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-04/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-04/README.gpt-55-2026-04-23.2026-05-20.md"
+      }
+    ],
+    "last_reviewed": "2026-05-20",
+    "last_model": "gpt-5.5-2026-04-23",
+    "decision": "approved",
+    "decision_date": "2026-05-20",
+    "decision_note": "Двойная рецензия, 2 итерации — критические ошибки исправлены"
+  },
+  "course/lesson-05/README.md": {
+    "history": [
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-05/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-05/README.gpt-55-2026-04-23.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-05/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-05/README.gpt-55-2026-04-23.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-05/README.gpt-55-2026-04-23.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-05/README.deepseek-v4-pro.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-05/README.gpt-55-2026-04-23.2026-05-20.md"
+      },
+      {
+        "date": "2026-05-20",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-05/README.deepseek-v4-pro.2026-05-20.md"
+      }
+    ],
+    "last_reviewed": "2026-05-20",
+    "last_model": "deepseek-v4-pro",
+    "decision": "approved",
+    "decision_date": "2026-05-20",
+    "decision_note": "4 итерации. DeepSeek чист. GPT остаточные замечания по уровню детализации — не критично."
+  },
+  "course/lesson-06/README.md": {
+    "history": [
+      {
+        "date": "2026-05-22",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-06/README.deepseek-v4-pro.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-06/README.gpt-55-2026-04-23.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-06/README.deepseek-v4-pro.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-06/README.gpt-55-2026-04-23.2026-05-22.md"
+      }
+    ],
+    "last_reviewed": "2026-05-22",
+    "last_model": "gpt-5.5-2026-04-23"
+  },
+  "course/lesson-07/README.md": {
+    "history": [
+      {
+        "date": "2026-05-22",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-07/README.gpt-55-2026-04-23.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-07/README.deepseek-v4-pro.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-07/README.gpt-55-2026-04-23.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-07/README.deepseek-v4-pro.2026-05-22.md"
+      }
+    ],
+    "last_reviewed": "2026-05-22",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-08/README.md": {
+    "history": [
+      {
+        "date": "2026-05-22",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-08/README.gpt-55-2026-04-23.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-08/README.deepseek-v4-pro.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-08/README.gpt-55-2026-04-23.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-22",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-08/README.deepseek-v4-pro.2026-05-22.md"
+      }
+    ],
+    "last_reviewed": "2026-05-22",
+    "last_model": "deepseek-v4-pro"
+  }
+}
