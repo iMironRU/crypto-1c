@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# review.sh — отправить урок на рецензию ИИ-редактору
+# review.sh — отправить файл курса на рецензию ИИ-редактору
 #
 # Использование:
 #   ./scripts/review.sh <файл>                     — DeepSeek (по умолчанию)
@@ -9,8 +9,14 @@
 #
 # Примеры:
 #   ./scripts/review.sh course/lesson-01/README.md
-#   ./scripts/review.sh course/lesson-02/README.md gpt-5.5
-#   ./scripts/review.sh course/lesson-04/README.md gemini-2.5-pro
+#   ./scripts/review.sh course/lesson-02/questions.md gpt-5.5
+#   ./scripts/review.sh docs/glossary.md deepseek-v4-pro
+#   ./scripts/review.sh configuration/README.md gpt-5.5
+#
+# Промпт выбирается автоматически по имени файла:
+#   questions.md / answers.md  → reviewer-qa.md
+#   docs/* / configuration/*   → reviewer-docs.md
+#   всё остальное              → reviewer.md  (урок)
 #
 # Требования:
 #   - Python 3 в PATH
@@ -25,7 +31,7 @@ CHAPTER_FILE="${1:-}"
 MODEL="${2:-deepseek-v4-pro}"
 
 if [[ -z "$CHAPTER_FILE" ]]; then
-    echo "Использование: $0 <путь к файлу урока> [модель]" >&2
+    echo "Использование: $0 <путь к файлу> [модель]" >&2
     exit 1
 fi
 
@@ -86,20 +92,29 @@ else:
     api_url = "https://api.deepseek.com/chat/completions"
     provider_label = "DeepSeek"
 
-# --- Промпт и текст урока ---
-prompt_path   = root_dir / "scripts" / "prompts" / "reviewer.md"
+# --- Автовыбор промпта по имени/расположению файла ---
+fname = chapter_file.name
+rel_to_root = chapter_file.relative_to(root_dir)
+parts = rel_to_root.parts  # e.g. ('course','lesson-01','questions.md') or ('docs','glossary.md')
+
+if fname in ("questions.md", "answers.md"):
+    prompt_name = "reviewer-qa.md"
+elif parts[0] in ("docs", "configuration"):
+    prompt_name = "reviewer-docs.md"
+else:
+    prompt_name = "reviewer.md"
+
+prompt_path   = root_dir / "scripts" / "prompts" / prompt_name
 system_prompt = prompt_path.read_text(encoding="utf-8")
 chapter_text  = chapter_file.read_text(encoding="utf-8")
 
 # --- Запрос к API ---
-# OpenAI gpt-5+ использует max_completion_tokens и не принимает temperature
-# Gemini и DeepSeek используют max_tokens и принимают temperature
 tokens_key = "max_completion_tokens" if is_openai else "max_tokens"
 payload = {
     "model": model,
     "messages": [
         {"role": "system", "content": system_prompt},
-        {"role": "user",   "content": f"Вот урок для рецензии:\n\n{chapter_text}"}
+        {"role": "user",   "content": f"Вот файл для рецензии:\n\n{chapter_text}"}
     ],
     tokens_key: 8192
 }
@@ -114,7 +129,7 @@ req = urllib.request.Request(
     method="POST"
 )
 
-print(f"Отправляю запрос в {provider_label} ({model})...", flush=True)
+print(f"Отправляю {rel_to_root} → {provider_label} ({model}) [промпт: {prompt_name}]...", flush=True)
 try:
     with urllib.request.urlopen(req, timeout=180) as resp:
         result = json.loads(resp.read().decode("utf-8"))
@@ -130,20 +145,33 @@ model_used  = result.get("model", model)
 tokens      = result.get("usage", {})
 
 # --- Путь для сохранения рецензии ---
-rel        = chapter_file.relative_to(root_dir / "course")
-lesson_dir = rel.parts[0]          # lesson-01
-stem       = rel.stem               # README
 today      = date.today().isoformat()
 model_short = re.sub(r"[^a-z0-9\-]", "", model_used.lower())[:20]
+stem       = chapter_file.stem  # e.g. "questions", "README", "glossary"
 
-out_dir = root_dir / "reviews" / lesson_dir
+# Определяем папку рецензии по расположению файла
+if parts[0] == "course":
+    # course/lesson-NN/file.md → reviews/lesson-NN/
+    lesson_dir = parts[1]  # lesson-NN
+    out_dir = root_dir / "reviews" / lesson_dir
+    chapter_key = str(rel_to_root)
+elif parts[0] == "docs":
+    out_dir = root_dir / "reviews" / "docs"
+    chapter_key = str(rel_to_root)
+elif parts[0] == "configuration":
+    out_dir = root_dir / "reviews" / "configuration"
+    chapter_key = str(rel_to_root)
+else:
+    out_dir = root_dir / "reviews" / parts[0]
+    chapter_key = str(rel_to_root)
+
 out_dir.mkdir(parents=True, exist_ok=True)
 out_file = out_dir / f"{stem}.{model_short}.{today}.md"
 
 # --- Сохранить с YAML-фронтматтером ---
 frontmatter = (
     f"---\n"
-    f"file: course/{rel}\n"
+    f"file: {rel_to_root}\n"
     f"model: {model_used}\n"
     f"date: {today}\n"
     f"tokens_prompt: {tokens.get('prompt_tokens', '?')}\n"
@@ -157,9 +185,8 @@ print(f"Рецензия сохранена: {out_file.relative_to(root_dir)}")
 status_path = root_dir / "docs" / "review-status.json"
 status = json.loads(status_path.read_text()) if status_path.exists() else {}
 
-chapter_key = f"course/{rel}"
-entry       = status.get(chapter_key, {})
-history     = entry.get("history", [])
+entry   = status.get(chapter_key, {})
+history = entry.get("history", [])
 history.append({
     "date":  today,
     "model": model_used,

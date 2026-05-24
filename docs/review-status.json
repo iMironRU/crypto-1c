@@ -185,9 +185,19 @@
         "date": "2026-05-22",
         "model": "gpt-5.5-2026-04-23",
         "file": "reviews/lesson-06/README.gpt-55-2026-04-23.2026-05-22.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-06/README.deepseek-v4-pro.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-06/README.gpt-55-2026-04-23.2026-05-24.md"
       }
     ],
-    "last_reviewed": "2026-05-22",
+    "last_reviewed": "2026-05-24",
     "last_model": "gpt-5.5-2026-04-23"
   },
   "course/lesson-07/README.md": {
@@ -241,5 +251,341 @@
     ],
     "last_reviewed": "2026-05-22",
     "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-05/questions.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-05/questions.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-05/questions.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-01/questions.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-01/questions.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-01/questions.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-03/questions.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-03/questions.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-03/questions.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-06/questions.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-06/questions.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-06/questions.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-04/questions.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-04/questions.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-04/questions.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-03/answers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-03/answers.deepseek-v4-pro.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-03/answers.gpt-55-2026-04-23.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "gpt-5.5-2026-04-23"
+  },
+  "course/lesson-02/questions.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-02/questions.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-02/questions.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-08/questions.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-08/questions.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-08/questions.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-02/answers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-02/answers.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-02/answers.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "configuration/README.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/configuration/README.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/configuration/README.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-07/questions.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-07/questions.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-07/questions.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-04/answers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-04/answers.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-04/answers.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "docs/certificates.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/docs/certificates.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/docs/certificates.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-07/answers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-07/answers.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-07/answers.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "docs/glossary.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/docs/glossary.deepseek-v4-pro.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/docs/glossary.gpt-55-2026-04-23.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "gpt-5.5-2026-04-23"
+  },
+  "course/lesson-08/answers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-08/answers.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-08/answers.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-05/answers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-05/answers.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-05/answers.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-06/answers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-06/answers.gpt-55-2026-04-23.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-06/answers.deepseek-v4-pro.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "deepseek-v4-pro"
+  },
+  "course/lesson-01/answers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/lesson-01/answers.deepseek-v4-pro.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/lesson-01/answers.gpt-55-2026-04-23.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "gpt-5.5-2026-04-23"
+  },
+  "docs/providers.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/docs/providers.deepseek-v4-pro.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/docs/providers.gpt-55-2026-04-23.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "gpt-5.5-2026-04-23"
+  },
+  "docs/binary-data.md": {
+    "history": [
+      {
+        "date": "2026-05-24",
+        "model": "deepseek-v4-pro",
+        "file": "reviews/docs/binary-data.deepseek-v4-pro.2026-05-24.md"
+      },
+      {
+        "date": "2026-05-24",
+        "model": "gpt-5.5-2026-04-23",
+        "file": "reviews/docs/binary-data.gpt-55-2026-04-23.2026-05-24.md"
+      }
+    ],
+    "last_reviewed": "2026-05-24",
+    "last_model": "gpt-5.5-2026-04-23"
   }
 }
